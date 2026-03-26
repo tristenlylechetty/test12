@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Cygnet Booking Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Black Cygnet Booking Assistant</h1>
+    <p class="sub">Schedule Capital Legacy field visits with map + calendar support.</p>
+
+    <section class="card">
+      <h2>1) Client Details</h2>
+      <div class="grid">
+        <label>Client Name <input id="clientName" /></label>
+        <label>Client Phone <input id="clientPhone" /></label>
+        <label>Region
+          <select id="region"></select>
+        </label>
+        <label>Date <input id="date" type="date" /></label>
+        <label class="full">Address <input id="address" placeholder="Start typing client address" /></label>
+        <button id="geocodeBtn" type="button">Validate Address</button>
+      </div>
+      <div id="geoResult" class="hint"></div>
+    </section>
+
+    <section class="card">
+      <h2>2) Suggested Slots</h2>
+      <button id="suggestBtn" type="button">Find Best Slots</button>
+      <div id="slots"></div>
+    </section>
+
+    <section class="card">
+      <h2>3) Book Appointment</h2>
+      <label>Notes <textarea id="notes"></textarea></label>
+      <button id="bookBtn" type="button">Book Selected Slot</button>
+      <div id="bookResult" class="hint"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
